@@ -7,24 +7,76 @@
             "title": "Enable Firewall",
             "description": "Required. Whether the firewall should be enabled or not.",
             "property_order": 10,
+            "options": {
+                "infoText": "Key name: EnableFirewall"
+            },
             "type": "boolean"
         },
         "BlockAllIncoming": {
             "title": "Block All Incoming",
             "description": "Optional. Corresponds to the 'Block all incoming connections' option.",
             "property_order": 20,
+            "options": {
+                "infoText": "Key name: BlockAllIncoming"
+            },
             "type": "boolean"
+        },
+        "EnableLogging": {
+            "title": "Enable Logging",
+            "description": "Required with Logging Option. Enables logging for use with Logging Options.",
+            "property_order": 30,
+            "options": {
+                "infoText": "Key name: EnableLogging"
+            },
+            "type": "boolean",
+            "links": [
+                {
+                    "rel": "Device Management Profile - Firewall",
+                    "href": "https://developer.apple.com/documentation/devicemanagement/firewall?changes=latest_minor"
+                }
+            ]
+        },
+        "LoggingOption": {
+            "title": "Logging Option",
+            "description": "Required with Enable Logging. Enable Logging must be set to true. Selects the log level for logging",
+            "property_order": 40,
+            "type": "string",
+            "options": {
+                "enum_titles": [
+                    "Throttled",
+                    "Brief",
+                    "Detailed"
+                ],
+                "infoText": "Key name: LoggingOption"
+            },
+            "links": [
+                {
+                    "rel": "Device Management Profile - Firewall",
+                    "href": "https://developer.apple.com/documentation/devicemanagement/firewall?changes=latest_minor"
+                }
+            ],
+            "enum": [
+                "throttled",
+                "brief",
+                "detail"
+            ]
         },
         "EnableStealthMode": {
             "title": "Enable Stealth Mode",
             "description": "Optional. Corresponds to 'Enable stealth mode.'",
-            "property_order": 30,
+            "property_order": 50,
+            "options": {
+                "infoText": "Key name: EnableStealthMode"
+            },
             "type": "boolean"
         },
         "Applications": {
             "title": "Applications",
             "description": "Optional. A list of applications explicitly allowing or denying incoming connections. Applications that are signed by a valid certificate authority are automatically added to the list of allowed apps, rather than prompting the user to authorize them.",
-            "property_order": 40,
+            "property_order": 60,
+            "options": {
+                "infoText": "Key name: Applications"
+            },
             "type": "array",
             "items": {
                 "type": "object",
