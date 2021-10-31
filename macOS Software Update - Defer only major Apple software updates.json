@@ -1,0 +1,25 @@
+{
+    "title": "Defer only major Apple software updates (com.apple.applicationaccess)",
+    "description": "Defer major Apple macOS software updates on macOS 11.3 or later. For example, if the current version of macOS is Big Sur 11.3, defer Monterey 12.0 and later.",
+    "__feedback": "bill@talkingmoose.net",
+    "properties": {
+        "enforcedSoftwareUpdateMajorOSDeferredInstallDelay": {
+            "title": "Defer only major Apple software updates",
+            "description": "Enter a number 1-90.",
+            "default": 30,
+            "property_order": 10,
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 90,
+            "options": {
+                "infoText": "Key name: enforcedSoftwareUpdateMajorOSDeferredInstallDelay"
+            },
+            "links": [
+                {
+                    "rel": "More information",
+                    "href": "https://support.apple.com/guide/mdm/managing-software-updates-mdm02df57e2a/web"
+                }
+            ]
+        }
+    }
+}
