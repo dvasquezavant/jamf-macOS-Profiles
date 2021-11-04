@@ -344,6 +344,32 @@
                 }
             ]
         },
+        "Tier": {
+            "title": "Tier",
+            "default": "Production",
+            "description": "This setting lets you specify the ring for users in your organization. The OneDrive sync app updates to the public through three rings; first to Insiders, then to Production, and finally to Deferred. When you enable this setting and select a ring, users aren't able to change it.",
+            "property_order": 92,
+            "type": "string",
+            "options": {
+                "enum_titles": [
+                    "Insiders Ring",
+                    "Production Ring",
+                    "Deferred Ring"
+                ],
+                "infoText": "Key name: Tier"
+            },
+            "links": [
+                {
+                    "rel": "More information",
+                    "href": "https://docs.microsoft.com/en-us/onedrive/deploy-and-configure-on-macos#tier"
+                }
+            ],
+            "enum": [
+                "Insiders",
+                "Production",
+                "Deferred"
+            ]
+        },
         "UploadBandwidthLimited": {
             "title": "Upload Bandwidth Limit",
             "default": 50000,
